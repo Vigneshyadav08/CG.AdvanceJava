@@ -1,0 +1,242 @@
+
+Capgemini Left Shift Training – Java Full Stack
+Scenario-Based Questions on OOPS Fundamentals
+(Static, Non-Static, Final, Encapsulation)
+
+Topics Covered:
+Static variables and methods
+Non-static variables and methods
+Final keyword (variable, method, class)
+Encapsulation (private data, getters/setters)
+
+INSTRUCTIONS:
+• Complex scenario-based questions
+• No answers provided
+• Write answers in the space given
+
+===============================================================
+
+1. Scenario:
+class Test {
+    static int x = 10;
+    int y = 20;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        Test t2 = new Test();
+        t1.x = 100;
+        t2.y = 200;
+        System.out.println(t2.x + " " + t1.y);
+    }
+}
+
+Question:
+Explain the output using static and non-static variable behavior.
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+2. Scenario:
+class Demo {
+    final int x = 10;
+
+    void change() {
+        x = 20;
+    }
+}
+
+Question:
+What compilation error occurs and why is this operation restricted?
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+3. Scenario:
+class Parent {
+    final void show() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+    void show() {
+        System.out.println("Child");
+    }
+}
+
+Question:
+What happens at compile time and why is overriding not allowed here?
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+4. Scenario:
+final class Utility {
+    void display() {
+        System.out.println("Utility");
+    }
+}
+
+class Helper extends Utility {
+}
+
+Question:
+What compilation error occurs and why does Java prevent inheritance here?
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+5. Scenario:
+class Account {
+    private double balance = 5000;
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account acc = new Account();
+        acc.setBalance(-2000);
+        System.out.println(acc.getBalance());
+    }
+}
+
+Question:
+What design flaw exists despite encapsulation and how can it be improved?
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+6. Scenario:
+class Sample {
+    static int count = 0;
+
+    Sample() {
+        count++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Sample s1 = new Sample();
+        Sample s2 = new Sample();
+        Sample s3 = new Sample();
+        System.out.println(Sample.count);
+    }
+}
+
+Question:
+Explain why static variables are suitable for this requirement.
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+7. Scenario:
+class Test {
+    int x = 10;
+
+    static void show() {
+        System.out.println(x);
+    }
+}
+
+Question:
+What type of error occurs and why can static methods not access non-static variables directly?
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+8. Scenario:
+class Example {
+    static int x = 10;
+
+    void display() {
+        System.out.println(x);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example e1 = new Example();
+        Example e2 = new Example();
+        e1.display();
+        e2.display();
+    }
+}
+
+Question:
+Explain why both objects print the same value and how static data behaves.
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+9. Scenario:
+class Data {
+    private int value = 50;
+
+    void update(int value) {
+        this.value = value;
+    }
+
+    int read() {
+        return value;
+    }
+}
+
+Question:
+Explain how encapsulation and data hiding are applied here.
+
+Answer:
+______________________________________________
+______________________________________________
+
+---------------------------------------------------------------
+
+10. Final Scenario:
+A Java application heavily uses:
+• Static variables for business data
+• Final methods in core classes
+• Poorly designed getters and setters
+
+Question:
+Explain the impact on flexibility, testing, scalability, and maintenance.
+
+Answer:
+______________________________________________
+______________________________________________
+______________________________________________
+
+===============================================================
+END OF QUESTIONS
